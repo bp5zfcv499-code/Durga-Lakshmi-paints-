@@ -1,1 +1,0 @@
-# Durga-Lakshmi-paints-
