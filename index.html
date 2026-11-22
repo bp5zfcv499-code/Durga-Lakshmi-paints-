@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durga Lakshmi Paints | Colour Your World</title>
+<meta name="description" content="Discover beautiful colours and paint inspiration at Durga Lakshmi Paints, Husnur.">
+
+<style>
+:root {
+  --navy:#102d43;
+  --gold:#d8ad58;
+  --cream:#fbf8f1;
+  --white:#fff;
+  --text:#25323a;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:Arial,sans-serif;
+  background:var(--cream);
+  color:var(--text);
+}
+
+a { text-decoration:none; color:inherit; }
+
+button { cursor:pointer; font:inherit; }
+
+header {
+  background:var(--cream);
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 2px 15px #0000000c;
+}
+
+nav {
+  max-width:1200px;
+  margin:auto;
+  padding:15px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img {
+  width:55px;
+  height:55px;
+  object-fit:contain;
+}
+
+.logo-icon {
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  display:grid;
+  place-items:center;
+  background:var(--gold);
+  color:var(--navy);
+  font-size:25px;
+  font-weight:bold;
+}
+
+.logo h2 {
+  font-family:Georgia,serif;
+  color:var(--navy);
+  font-size:19px;
+}
+
+.logo small {
+  display:block;
+  color:#a47b36;
+  font-size:10px;
+  letter-spacing:3px;
+  margin-top:4px;
+}
+
+.nav-links {
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.nav-links a {
+  font-size:14px;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.nav-links a:hover { color:#b88731; }
+
+.nav-btn,.btn {
+  background:var(--navy);
+  color:white;
+  border:0;
+  padding:14px 23px;
+  border-radius:30px;
+  display:inline-block;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.nav-btn:hover,.btn:hover {
+  background:#28516b;
+  transform:translateY(-3px);
+}
+
+.menu {
+  display:none;
+  background:none;
+  border:0;
+  font-size:28px;
+  color:var(--navy);
+}
+
+.hero {
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(90deg,#0b2438eF 0%,#0b2438b8 48%,#0b243833 100%),
+    url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color:white;
+}
+
+.hero-content {
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:70px 25px;
+}
+
+.tag {
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.hero h1 {
+  font-family:Georgia,serif;
+  font-size:clamp(45px,7vw,82px);
+  line-height:1.08;
+  max-width:700px;
+  margin:25px 0;
+}
+
+.hero h1 span { color:var(--gold); }
+
+.hero p {
+  max-width:520px;
+  line-height:1.8;
+  color:#e6edf1;
+  font-size:17px;
+  margin-bottom:30px;
+}
+
+.btn-gold {
+  background:var(--gold);
+  color:var(--navy);
+  margin-right:10px;
+}
+
+.btn-outline {
+  border:1px solid white;
+  background:transparent;
+}
+
+section { padding:85px 22px; }
+
+.container {
+  max-width:1200px;
+  margin:auto;
+}
+
+.heading {
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.heading small {
+  color:#b1853c;
+  letter-spacing:3px;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.heading h2 {
+  font-family:Georgia,serif;
+  color:var(--navy);
+  font-size:clamp(32px,5vw,48px);
+  margin:14px 0;
+}
+
+.heading p {
+  color:#78838a;
+  max-width:600px;
+  margin:auto;
+  line-height:1.8;
+}
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.product {
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 10px 35px #102d4310;
+  transition:.35s;
+}
+
+.product:hover {
+  transform:translateY(-8px);
+  box-shadow:0 18px 40px #102d4320;
+}
+
+.product img {
+  width:100%;
+  height:280px;
+  object-fit:cover;
+}
+
+.product-info { padding:25px; }
+
+.product-info h3 {
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:25px;
+  margin-bottom:10px;
+}
+
+.product-info p {
+  color:#7a858c;
+  line-height:1.7;
+  margin-bottom:20px;
+  font-size:14px;
+}
+
+.product-info a {
+  color:#a77b2e;
+  font-weight:bold;
+}
+
+.colours { background:#f0ebdf; }
+
+.palette {
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:15px;
+}
+
+.colour {
+  background:white;
+  border-radius:14px;
+  padding:9px;
+  text-align:center;
+  box-shadow:0 5px 20px #00000009;
+}
+
+.colour-box {
+  height:115px;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+
+.colour b {
+  font-size:13px;
+  color:var(--navy);
+}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-grid img {
+  width:100%;
+  height:440px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.about-text h2 {
+  font:normal clamp(35px,5vw,49px) Georgia,serif;
+  color:var(--navy);
+  margin:15px 0;
+}
+
+.about-text p {
+  color:#77838a;
+  line-height:1.9;
+  margin-bottom:25px;
+}
+
+.contact {
+  background:var(--navy);
+  color:white;
+}
+
+.contact .heading h2 { color:white; }
+
+.contact .heading p { color:#c6d1d8; }
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+
+.details p {
+  margin:25px 0;
+  line-height:2;
+  color:#d6e0e5;
+}
+
+.form {
+  background:white;
+  color:var(--text);
+  border-radius:20px;
+  padding:28px;
+}
+
+.form h3 {
+  color:var(--navy);
+  font:normal 28px Georgia,serif;
+  margin-bottom:20px;
+}
+
+.form input,.form textarea {
+  width:100%;
+  padding:15px;
+  margin-bottom:14px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  font:inherit;
+}
+
+.form textarea {
+  height:120px;
+  resize:vertical;
+}
+
+.form button { width:100%; }
+
+footer {
+  background:#091d2b;
+  color:#c6d1d8;
+  padding:25px;
+  text-align:center;
+  font-size:13px;
+}
+
+footer strong { color:var(--gold); }
+
+.reveal {
+  opacity:0;
+  transform:translateY(25px);
+  transition:.7s;
+}
+
+.reveal.show {
+  opacity:1;
+  transform:translateY(0);
+}
+
+@media(max-width:850px) {
+  .menu { display:block; }
+
+  .nav-links {
+    display:none;
+    position:absolute;
+    top:85px;
+    left:0;
+    width:100%;
+    background:var(--cream);
+    padding:25px;
+    flex-direction:column;
+    align-items:flex-start;
+    box-shadow:0 8px 15px #00000012;
+  }
+
+  .nav-links.open { display:flex; }
+
+  .nav-btn { display:none; }
+
+  .products { grid-template-columns:1fr 1fr; }
+
+  .palette { grid-template-columns:repeat(3,1fr); }
+
+  .about-grid,.contact-grid { grid-template-columns:1fr; }
+}
+
+@media(max-width:550px) {
+  section { padding:65px 18px; }
+
+  .hero { min-height:580px; }
+
+  .hero h1 { font-size:48px; }
+
+  .products { grid-template-columns:1fr; }
+
+  .palette { grid-template-columns:repeat(2,1fr); }
+
+  .about-grid img { height:300px; }
+
+  .logo h2 { font-size:15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<a href="#home" class="logo">
+  <img src="logo.png" alt="Durga Lakshmi Paints logo"
+       onerror="this.style.display='none';document.getElementById('fallbackLogo').style.display='grid'">
+  <span class="logo-icon" id="fallbackLogo" style="display:none">D</span>
+  <span>
+    <h2>DURGA LAKSHMI</h2>
+    <small>PAINTS & COLOURS</small>
+  </span>
+</a>
+
+<div class="nav-links" id="navLinks">
+  <a href="#home">HOME</a>
+  <a href="#collections">COLLECTIONS</a>
+  <a href="#colours">COLOURS</a>
+  <a href="#about">ABOUT</a>
+  <a href="#contact">CONTACT</a>
+</div>
+
+<a class="nav-btn" href="#contact">Contact Us ↗</a>
+
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+
+</nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+<div class="hero-content">
+  <div class="tag">Welcome to Durga Lakshmi Paints</div>
+
+  <h1>Bring Your Walls To <span>Life.</span></h1>
+
+  <p>
+    Discover beautiful colours, explore creative ideas
+    and transform your home into a place that reflects
+    your personality.
+  </p>
+
+  <a href="#collections" class="btn btn-gold">Explore Colours ↗</a>
+  <a href="#contact" class="btn btn-outline">Get In Touch</a>
+</div>
+</div>
+
+<section id="collections">
+<div class="container">
+
+<div class="heading reveal">
+  <small>Our Collections</small>
+  <h2>Beauty In Every Brushstroke</h2>
+  <p>Explore beautiful ideas for every corner of your home.</p>
+</div>
+
+<div class="products">
+
+<div class="product reveal">
+  <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85" alt="Interior design">
+  <div class="product-info">
+    <h3>Interior Paints</h3>
+    <p>Give your rooms a beautiful and refreshing new appearance.</p>
+    <a href="#contact">Enquire Now ↗</a>
+  </div>
+</div>
+
+<div class="product reveal">
+  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=85" alt="Exterior home">
+  <div class="product-info">
+    <h3>Exterior Paints</h3>
+    <p>Make your home's first impression truly memorable.</p>
+    <a href="#contact">Enquire Now ↗</a>
+  </div>
+</div>
+
+<div class="product reveal">
+  <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=85" alt="Premium finish">
+  <div class="product-info">
+    <h3>Premium Finishes</h3>
+    <p>Add character and style with beautiful finishing ideas.</p>
+    <a href="#contact">Enquire Now ↗</a>
+  </div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="colours" id="colours">
+<div class="container">
+
+<div class="heading reveal">
+  <small>Colour Inspiration</small>
+  <h2>Find Your Favourite Shade</h2>
+  <p>A beautiful colour can change the feeling of an entire room.</p>
+</div>
+
+<div class="palette reveal">
+
+<div class="colour"><div class="colour-box" style="background:#e8d8c1"></div><b>Soft Sand</b></div>
+<div class="colour"><div class="colour-box" style="background:#a8b9a3"></div><b>Sage Green</b></div>
+<div class="colour"><div class="colour-box" style="background:#d7a18c"></div><b>Rose Clay</b></div>
+<div class="colour"><div class="colour-box" style="background:#7f9dab"></div><b>Ocean Blue</b></div>
+<div class="colour"><div class="colour-box" style="background:#d9bd68"></div><b>Golden Glow</b></div>
+<div class="colour"><div class="colour-box" style="background:#65765b"></div><b>Forest Green</b></div>
+
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+
+<img class="reveal"
+src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85"
+alt="Beautiful home interior">
+
+<div class="about-text reveal">
+  <div class="tag">Our Inspiration</div>
+  <h2>Make Every Space Special.</h2>
+  <p>
+    Welcome to Durga Lakshmi Paints.
+    We believe that colours make a home feel alive.
+    Explore inspiring shades and discover ideas
+    to make your home more beautiful.
+  </p>
+  <a href="#contact" class="btn">Contact Our Store ↗</a>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+
+<div class="heading reveal">
+  <small>Get In Touch</small>
+  <h2>Let's Talk About Colours.</h2>
+  <p>Have a question about paints or colours?
+     Send us an enquiry on WhatsApp.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="details reveal">
+  <h2>Durga Lakshmi Paints</h2>
+  <p>
+    📍 Location: Husnur<br><br>
+    📱 WhatsApp: +91 90088 77127<br><br>
+    🎨 Interior & Exterior Paints<br><br>
+    ✨ Colour inspiration for your home
+  </p>
+  <a class="btn btn-gold" target="_blank"
+     href="https://wa.me/919008877127">
+     Chat On WhatsApp ↗
+  </a>
+</div>
+
+<form class="form reveal" id="contactForm">
+  <h3>Send An Enquiry</h3>
+
+  <input id="name" type="text"
+         placeholder="Your Name" required>
+
+  <input id="phone" type="tel"
+         placeholder="Your Phone Number" required>
+
+  <textarea id="message"
+            placeholder="What paint or colour are you looking for?"
+            required></textarea>
+
+  <button class="btn" type="submit">
+    Send WhatsApp Message ↗
+  </button>
+</form>
+
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="year"></span>
+  <strong>Durga Lakshmi Paints</strong>.
+  All Rights Reserved.
+  <br><br>
+  Colour Your World. Make It Beautiful.
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  menuBtn.textContent =
+    navLinks.classList.contains("open") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+
+document.querySelectorAll(".reveal").forEach(element => {
+  observer.observe(element);
+});
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  const text =
+    "Hello Durga Lakshmi Paints!%0A" +
+    "Name: " + encodeURIComponent(name) + "%0A" +
+    "Phone: " + encodeURIComponent(phone) + "%0A" +
+    "Enquiry: " + encodeURIComponent(message);
+
+  const whatsappURL =
+    "https://wa.me/919008877127?text=" + text;
+
+  window.open(whatsappURL,"_blank");
+});
+</script>
+
+</body>
+</html>
